@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>Databases</h1>
+    <p>
+        <ul>
+            <li>SELECT * FROM Customers;</li>
+            <p>Returns all records from a table named "Customers".</p>
+            <li>SELECT * FROM Customers<br>
+                WHERE Country='USA';</li>
+            <p>It is used to extract only those records that fulfill a specified condition, in this case it will select all customers from the USA.</p>
+            <li>SELECT COUNT(*)<br>
+                FROM Products;</li>
+            <p>Returns the number of rows that matches a specified criterion, in this case the rows that contain the data PRODUCTS.</p>
+            <li>INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)<br>
+                VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+                </li>
+            <p>It is used to insert new records in a table, either by specifying both column names and the values to be inserted or insert values for all the columns which don't need to be specified.</p>
+            <li>UPDATE Customers<br>
+                SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'<br>
+                WHERE CustomerID = 1;</li>
+            <p>It is used to modify the existing records in a table, in this case the first customer with a new contact person and a new city.</p>
+        </ul>
+
+        SQL databases are systems to manage data for queries and updates. Using it in my daily life would help me retrieve data efficiently and management. It helps with decision-making, data process, and supports development.
+    </p>
+</body>
+
+</html>
