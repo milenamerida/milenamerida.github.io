@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Milena Leticia Carreira Merida
+        WEB190 mod3 Lab
+        2/7/2025
+    -->
+<title>My First HTML5 Web Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, inicial-scale=1.0">
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #wrapper{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #aae3b9;
+    }
+    header{
+        text-align: center;
+        border: thin solid #28362c;
+        color: #28362c;
+    }
+    h1{
+        font-size: 35px;
+    }
+    nav{
+        display: flex;
+        background-color: #28362c;
+    }
+    nav a{
+        padding: 20px 25px;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+    }
+    nav a:hover{
+        background-color: #fff;
+        color: #28362c;
+        border: thin solid #28362c;
+    }
+    .row{
+        border: thin solid #28362c;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .side{
+        flex: 30%;
+        background-color: #fff;
+        padding: 20px;
+    }
+    .main{
+        flex: 70%;
+        padding: 20px;
+    }
+    #main{
+        border: thin solid #28362c;
+    }
+    #address{
+        border: thin solid #28362c;
+        padding: 7px;
+    }
+    footer{
+        border: thin solid #28362c;
+        text-align: center;
+    }
+    .fnav a{
+        text-decoration: none;
+        text-align: center;
+        color: #28362c;
+    }
+    @media screen and (max-width: 700px){
+        #wrapper{
+            width: 100%;
+        }
+        .row{
+            flex-direction: column;
+        }
+        nav{
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+
+
+<body>
+<div id="wrapper">
+    <header>
+        <h1>Mod 3 - Basic Flexbox</h1>
+    </header>
+
+    <nav>
+        <a href="#">Nav 1</a>
+        <a href="#">Nav 2</a>
+        <a href="#">Nav 3</a>
+        <a href="#">Nav 4</a>
+        <a href="#">Nav 5</a>
+    </nav>
+
+    <div class="row">
+        <div class="side">
+            <h2>Title</h2>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Pretium natoque lacus nisl nunc maximus eu fringilla himenaeos vel? Tincidunt habitasse luctus iaculis amet nascetur duis.</p>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Pretium natoque lacus nisl nunc maximus eu fringilla himenaeos vel? Tincidunt habitasse luctus iaculis amet nascetur duis.</p>
+        </div>
+
+        <div class="main">
+            <h2>Title</h2>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Pretium natoque lacus nisl nunc maximus eu fringilla himenaeos vel? Tincidunt habitasse luctus iaculis amet nascetur duis.</p>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Pretium natoque lacus nisl nunc maximus eu fringilla himenaeos vel? Tincidunt habitasse luctus iaculis amet nascetur duis.</p>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Pretium natoque lacus nisl nunc maximus eu fringilla himenaeos vel? Tincidunt habitasse luctus iaculis amet nascetur duis.</p>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Pretium natoque lacus nisl nunc maximus eu fringilla himenaeos vel? Tincidunt habitasse luctus iaculis amet nascetur duis.</p>
+            <div id="address">
+                Milena Leticia Carreira Merida<br>
+                1200 W Algonquin Road<br>
+                Palatine, IL, 60067<br>
+                123-456-7890<br>
+                <a href="mailto:co75628@mail.harpercollege.edu">co75628@mail.harpercollege.edu</a>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <p class="fnav">
+            <a href="#">Nav 1</a>
+            <a href="#">Nav 2</a>
+            <a href="#">Nav 3</a>
+            <a href="#">Nav 4</a>
+            <a href="#">Nav 5</a>
+        </p>
+        <p>Copyright&copy;2025, Milena Merida</p>
+    </footer>
+</div>
+</body>
+</html>
