@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-11 11:33:25 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUs0NjVROEU7MjAyNS0wMi0xMTsxMToyMjoyNSBBTTszMjcw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUs0NjVROEU7MjAyNS0wMi0xMTsxMTozMzoyNSBBTTsxOzMzODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="dependents" type="Integer" array="False" size=""/>
+            <declare name="gross" type="Real" array="False" size=""/>
+            <declare name="adjgross" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="incometax" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter your last name &quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter the number of dependents &quot;" newline="True"/>
+            <input variable="dependents"/>
+            <output expression="&quot;Enter gross income $&quot;" newline="True"/>
+            <input variable="gross"/>
+            <assign variable="adjgross" expression="gross-dependents*12000"/>
+            <if expression="adjgross &gt; 50000">
+                <then>
+                    <assign variable="tax" expression="0.2"/>
+                </then>
+                <else>
+                    <assign variable="tax" expression="0.1"/>
+                </else>
+            </if>
+            <assign variable="incometax" expression="adjgross*tax"/>
+            <if expression="incometax &lt; 0">
+                <then>
+                    <assign variable="incometax" expression="100"/>
+                </then>
+                <else>
+                    <assign variable="incometax" expression="adjgross*tax"/>
+                </else>
+            </if>
+            <output expression="&quot;User &quot; &amp; name &amp; &quot;, gross income $&quot; &amp; gross &amp; &quot;, number of dependents &quot; &amp; dependents &amp; &quot;. Adjusted gross income $&quot; &amp; adjgross &amp; &quot; and income tax $&quot; &amp; incometax" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
