@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-13 11:19:13 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUs0NjVROEU7MjAyNS0wMi0xMTsxMDo1Mzo0OSBBTTszMjc5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUs0NjVROEU7MjAyNS0wMi0xMTsxMToxNToxMyBBTTszOzMzNzk="/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUcyOEM2TUU7MjAyNS0wMi0xMzsxMToxOToxMyBBTTsyOzMzODg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="extprice" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="unitprice" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the quantity of items &quot;" newline="True"/>
+            <input variable="quantity"/>
+            <if expression="quantity &gt;= 1000">
+                <then>
+                    <assign variable="unitprice" expression="3.00"/>
+                    <assign variable="extprice" expression="quantity*unitprice"/>
+                </then>
+                <else>
+                    <assign variable="unitprice" expression="5.00"/>
+                    <assign variable="extprice" expression="quantity*unitprice"/>
+                </else>
+            </if>
+            <assign variable="tax" expression="extprice*0.07"/>
+            <assign variable="total" expression="extprice+tax"/>
+            <output expression="&quot;Quantity &quot; &amp; quantity &amp; &quot; extended price $&quot; &amp; extprice &amp; &quot; tax $&quot; &amp; tax &amp; &quot; and total $&quot; &amp; total &amp; &quot; unit price $&quot; &amp; unitprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
