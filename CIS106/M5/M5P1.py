@@ -1,8 +1,10 @@
 itemqty = int(input('Enter the quantity: '))
 if itemqty > 1000:
-  price = itemqty * 3
+  unitprice = 3.00
+  price = itemqty * unitprice
 else:
-  price = itemqty * 5
+  unitprice = 5.00
+  price = itemqty * unitprice
 tax = 0.07 * price
 total = price + tax
-print('Quantity {}, extended price ${:.2f}, tax ${:.2f} and total ${:.2f}'.format(itemqty,price,tax,total))
+print('Quantity {}, unit price ${:.2f}, extended price ${:.2f}, tax ${:.2f} and total ${:.2f}'.format(itemqty,unitprice,price,tax,total))
