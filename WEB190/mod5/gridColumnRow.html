@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Milena Leticia Carreira Merida
+        WEB190 mod5 Lab Part2
+        2/15/2025
+    -->
+<title>Module 5 - Grid Column Row Part2</title>
+<meta charset="utf-8">
+<style>
+.grid1{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    background-color: #008b8b;
+}
+.grid1 > div{
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    background-color: #01baba;
+    color: #fff;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    align-content: space-around;
+    background-color: #01baba;
+}
+.grid2 > div{
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    background-color: #008b8b;
+    color: #fff;
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>Web 190 - Module 5 Lab Part2</h1>
+    </header>
+    <h2>Grid Area 1 - This container demonstrates the justify-content - Center Property</h2>
+    <div class="grid1">
+        <div class="item-1">1</div>
+        <div class="item-2">2</div>
+        <div class="item-3">3</div>
+        <div class="item-4">4</div>
+        <div class="item-5">5</div>
+        <div class="item-6">6</div>
+    </div>
+    <p>The justify-content center property aligns the grid in the center of the grid container.</p> <!--Information from https://css-tricks.com/snippets/css/complete-guide-grid/#aa-justify-content -->
+    <h2>Grid Area 2 - This container demonstrates the align-content - Space-Around Property</h2>
+    <div class="grid2">
+        <div class="item-1">1</div>
+        <div class="item-2">2</div>
+        <div class="item-3">3</div>
+        <div class="item-4">4</div>
+        <div class="item-5">5</div>
+        <div class="item-6">6</div>
+    </div>
+    <p>The align-content space-around property places an even amount of space between each grid item, with no space at the far ends.</p> <!--Information from https://css-tricks.com/snippets/css/complete-guide-grid/#aa-align-content-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
