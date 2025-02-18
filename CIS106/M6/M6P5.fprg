@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-18 10:44:58 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUpEM0RSODk7MjAyNS0wMi0xODsxMDozNzoyNCBBTTszMjk3"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUpEM0RSODk7MjAyNS0wMi0xODsxMDo0NDo1OCBBTTsxOzM0MTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="salary, level, rate, bonus" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter last name: &quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter salary $&quot;" newline="True"/>
+            <input variable="salary"/>
+            <output expression="&quot;Enter job level: &quot;" newline="True"/>
+            <input variable="level"/>
+            <if expression="level &gt;= 10">
+                <then>
+                    <assign variable="rate" expression="0.25"/>
+                    <assign variable="bonus" expression="rate*salary"/>
+                </then>
+                <else>
+                    <if expression="level &gt;= 5">
+                        <then>
+                            <assign variable="rate" expression="0.20"/>
+                            <assign variable="bonus" expression="rate*salary"/>
+                        </then>
+                        <else>
+                            <assign variable="rate" expression="0.10"/>
+                            <assign variable="bonus" expression="rate*salary"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="name &amp; &quot; has a bonus of $&quot; &amp; bonus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

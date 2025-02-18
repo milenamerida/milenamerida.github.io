@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-18 10:46:41 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUpEM0RSODk7MjAyNS0wMi0xODsxMDoxMzo0MyBBTTszMjky"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUpEM0RSODk7MjAyNS0wMi0xODsxMDo0Njo0MSBBTTsyOzM0MDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cd, year, interest, total, percent" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the principle amount of CD: &quot;" newline="True"/>
+            <input variable="cd"/>
+            <output expression="&quot;Enter the year to maturity of CD: &quot;" newline="True"/>
+            <input variable="year"/>
+            <if expression="cd &gt; 100000">
+                <then>
+                    <assign variable="interest" expression="0.06"/>
+                    <assign variable="total" expression="cd*interest"/>
+                </then>
+                <else>
+                    <if expression="cd &gt; 50000 and year == 10">
+                        <then>
+                            <assign variable="interest" expression="0.05"/>
+                            <assign variable="total" expression="cd*interest"/>
+                        </then>
+                        <else>
+                            <if expression="cd &gt; 50000 and year == 5">
+                                <then>
+                                    <assign variable="interest" expression="0.04"/>
+                                    <assign variable="total" expression="cd*interest"/>
+                                </then>
+                                <else>
+                                    <assign variable="interest" expression="0.02"/>
+                                    <assign variable="total" expression="cd*interest"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="percent" expression="interest*100"/>
+            <output expression="&quot;CD $&quot; &amp; cd &amp; &quot;, interest rate &quot; &amp; percent &amp; &quot;% and interest amount for the first year $&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

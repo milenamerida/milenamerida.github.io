@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-13 01:29:48 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUVHOTdKR0Q7MjAyNS0wMi0xMzswMToyMToxOSBQTTszMzEz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUVHOTdKR0Q7MjAyNS0wMi0xMzswMToyOTo0OCBQTTsxOzM0MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pn" type="Integer" array="False" size=""/>
+            <declare name="qty" type="Integer" array="False" size=""/>
+            <declare name="unitcost, total" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the Part Number: &quot;" newline="True"/>
+            <input variable="pn"/>
+            <if expression="pn == &quot;10&quot; OR pn == &quot;55&quot;">
+                <then>
+                    <assign variable="unitcost" expression="1.00"/>
+                    <assign variable="total" expression="unitcost*qty"/>
+                </then>
+                <else>
+                    <if expression="pn == &quot;99&quot;">
+                        <then>
+                            <assign variable="unitcost" expression="2.00"/>
+                            <assign variable="total" expression="unitcost*qty"/>
+                        </then>
+                        <else>
+                            <if expression="pn == &quot;80&quot; OR pn == &quot;70&quot;">
+                                <then>
+                                    <assign variable="unitcost" expression="3.00"/>
+                                    <assign variable="total" expression="unitcost*qty"/>
+                                </then>
+                                <else>
+                                    <assign variable="unitcost" expression="5.00"/>
+                                    <assign variable="total" expression="unitcost*qty"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Part Number: &quot; &amp; pn &amp; &quot;, cost per unit $&quot; &amp; unitcost &amp; &quot; and total cost $&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
