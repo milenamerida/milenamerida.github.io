@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-27 10:14:18 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVFJTUUxM0w7MjAyNS0wMi0yNzsxMDowMjo1MSBBTTszMzA5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVFJTUUxM0w7MjAyNS0wMi0yNzsxMDoxNDoxOCBBTTsxOzM0MjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="prompt, lastname" type="String" array="False" size=""/>
+            <declare name="score1, score2, average" type="Real" array="False" size=""/>
+            <output expression="&quot;Do you want to run this program? (yes/no)&quot;" newline="True"/>
+            <input variable="prompt"/>
+            <if expression="prompt == &quot;yes&quot;">
+                <then>
+                    <while expression="prompt == &quot;yes&quot;">
+                        <output expression="&quot;Enter last name: &quot;" newline="True"/>
+                        <input variable="lastname"/>
+                        <output expression="&quot;Enter first exam score: &quot;" newline="True"/>
+                        <input variable="score1"/>
+                        <output expression="&quot;Enter second exam score: &quot;" newline="True"/>
+                        <input variable="score2"/>
+                        <assign variable="average" expression="(score1+score2)/2"/>
+                        <output expression="&quot;Average score for &quot; &amp; lastname &amp; &quot; is &quot; &amp; average" newline="True"/>
+                        <output expression="&quot;Do you want to run the program again?&quot;" newline="True"/>
+                        <input variable="prompt"/>
+                    </while>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
