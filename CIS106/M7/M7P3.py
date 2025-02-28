@@ -1,5 +1,4 @@
 prompt = input('Do you want to run this program? (yes/no) ')
-if prompt == 'yes':
   while prompt == 'yes':
     lastname = input('Enter last name: ')
     score1 = int(input('Enter first score: '))
