@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-28 10:25:53 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVFJTUUxM0w7MjAyNS0wMi0yNzsxMDowMjo1MSBBTTszMzA5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVFJTUUxM0w7MjAyNS0wMi0yNzsxMTowMzozNyBBTTs0OzM0MjY="/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUxWTUNRVko7MjAyNS0wMi0yODsxMDoyNTo1MyBBTTs0OzM0OTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="prompt" type="String" array="False" size=""/>
+            <declare name="qty, price, discount, extprice, disamount, total, sum" type="Real" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <output expression="&quot;Do you want to run this program? (Yes/No)&quot;" newline="True"/>
+            <input variable="prompt"/>
+            <while expression="prompt == &quot;Yes&quot;">
+                <output expression="&quot;Enter the quantity of items: &quot;" newline="True"/>
+                <input variable="qty"/>
+                <output expression="&quot;Enter the price of the item $&quot;" newline="True"/>
+                <input variable="price"/>
+                <assign variable="extprice" expression="qty*price"/>
+                <if expression="extprice &gt; 10000">
+                    <then>
+                        <assign variable="discount" expression="0.25"/>
+                    </then>
+                    <else>
+                        <assign variable="discount" expression="0.10"/>
+                    </else>
+                </if>
+                <assign variable="disamount" expression="extprice*discount"/>
+                <assign variable="sum" expression="sum + disamount"/>
+                <assign variable="total" expression="extprice-disamount"/>
+                <output expression="&quot;Extended price $&quot; &amp; extprice &amp; &quot;, discount amount $&quot; &amp; disamount &amp; &quot; and total $&quot; &amp; total" newline="True"/>
+                <output expression="&quot;Do you want to run this program again? (Yes/No)&quot;" newline="True"/>
+                <input variable="prompt"/>
+            </while>
+            <output expression="&quot;Total discount amount $&quot; &amp; sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
