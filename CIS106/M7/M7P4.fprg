@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-27 11:03:37 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVFJTUUxM0w7MjAyNS0wMi0yNzsxMDowMjo1MSBBTTszMzA5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVFJTUUxM0w7MjAyNS0wMi0yNzsxMTowMzozNyBBTTs0OzM0MjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="prompt, lastname" type="String" array="False" size=""/>
+            <declare name="hours, rate, pay, sum, average" type="Real" array="False" size=""/>
+            <declare name="employees" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="employees" expression="0"/>
+            <output expression="&quot;Do you want to run this program? (Yes/No)&quot;" newline="True"/>
+            <input variable="prompt"/>
+            <while expression="prompt == &quot;Yes&quot;">
+                <output expression="&quot;Enter last name: &quot;" newline="True"/>
+                <input variable="lastname"/>
+                <output expression="&quot;Enter hours worked: &quot;" newline="True"/>
+                <input variable="hours"/>
+                <output expression="&quot;Enter pay rate: &quot;" newline="True"/>
+                <input variable="rate"/>
+                <if expression="hours &gt; 40">
+                    <then>
+                        <assign variable="rate" expression="rate*1.5"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="pay" expression="hours*rate"/>
+                <output expression="&quot;Gross pay for &quot; &amp; lastname &amp; &quot; is $&quot; &amp; pay" newline="True"/>
+                <assign variable="sum" expression="sum+pay"/>
+                <assign variable="employees" expression="employees+1"/>
+                <output expression="&quot;Do you want to run the program again?&quot;" newline="True"/>
+                <input variable="prompt"/>
+            </while>
+            <assign variable="average" expression="sum/employees"/>
+            <output expression="&quot;Sum of all gross pay is $&quot; &amp; sum &amp; &quot;, number of employees is &quot; &amp; employees &amp; &quot; and average gross pay is $&quot; &amp; average" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
