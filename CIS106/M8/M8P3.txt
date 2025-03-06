@@ -1,0 +1,10 @@
+Johns
+120000
+Williams
+65000
+Parker
+34000
+Miller
+70000
+Davis
+40000
