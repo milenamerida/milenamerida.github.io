@@ -9,7 +9,7 @@ while lastname != "":
         dcode = f.readline()
         credits = float(f.readline())
 
-        if dcode == 'I':
+        if dcode.rstrip("\n") == 'I':
                 costpercredit = 250.00
         else:
                 costpercredit = 500.00
