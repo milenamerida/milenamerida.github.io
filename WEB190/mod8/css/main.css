@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-size: Montserrat, sans-serif;
+}
+#wrapper{
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    border: thin solid black;
+    background-color: #2196F3;
+}
+header{
+    background-color: #2196F3;
+    padding: 2px;
+    height: 250px;
+    background-image: url(../images/IMG_0345.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+h1{
+    padding: 15px;
+    margin: 5px;
+    color: #fff;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 8px;
+    padding: 10px;
+    align-content: space-around;
+}
+.grid-container > div{
+    background-color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+}
+.grid-container > div > h5{
+    margin: 0 0 4px 0;
+}
+.grid-container > div > img{
+    width: 100%;
+    height: auto;
+}
+p{
+    font-family: Aleo, serif;
+    text-align: center;
+    background-color: #fff;
+    margin-left: 10px;
+    font-size: 1.1em;
+}
+.tab{
+    display: none;
+}
+
+@media screen and (max-width: 1024px){
+    #wrapper{
+        width: 100%;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        padding: 10px;
+        align-content: center;
+    }
+    .lapdesk{
+        display: none;
+    }
+    .tab{
+        display: block;
+    }
+    .smart{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 510px){
+    #wrapper{
+        width: 100%;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+        padding: 10px;
+        align-content: center;
+    }
+    .lapdesk{
+        display: none;
+    }
+    .tab{
+        display: none;
+    }
+    .smart{
+        display: block;
+    }
+}
