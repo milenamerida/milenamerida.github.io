@@ -1,0 +1,124 @@
+body{
+    font-family: "Mulish", sans-serif;
+    background-color: #fefae0;
+}
+
+#container{
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    grid-template-areas:
+    'header header'
+    'nav nav'
+    'hero hero'
+    'item1 item2'
+    'footer footer';
+    /* border: thin solid black;  */
+}
+
+.header{
+    padding: 15px;
+    height: 100%;
+    text-align: center;
+    /* border: thin solid black; */
+}
+
+.header h1{
+    margin-bottom: -10px;
+    font-family: "Bona Nova SC", serif;
+    font-size: 3em;
+    color: #283618;
+}
+
+.header a{
+    text-decoration: none;
+}
+
+.nav{
+    display: grid;
+    background-color: #283618;
+    grid-template-columns: auto auto auto auto;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav > div{
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+.nav > div > a{
+    color: #fefae0;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+}
+
+.hero{
+    background-image: url(../images/front.jpg);
+    padding: 100px;
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* border: thin solid black;  */
+}
+
+.body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    align-items: center;
+    /* border: thin solid black; */
+}
+
+.body > div.item1{
+    height: 400px;
+    justify-self: center;
+    /* border: thin solid black; */
+}
+
+.body > div.item1 img{
+    border: 4px solid #dda15e;
+}
+
+.body > div.item2{
+    height: 400px;
+    justify-self: center;
+    /* border: thin solid black; */
+}
+
+.footer p{
+    color: #283618;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 525px){
+    #container{
+        width: 100%;
+    }
+    .item1{grid-area: left;}
+    .item2{grid-area: right;}
+    .body{
+        display: grid;
+        grid-template-areas: 
+        'left'
+        'right';
+        column-gap: 0;
+        row-gap: 5px;
+    }
+    .nav{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 5px;
+        padding: 5px;
+    }
+
+}
