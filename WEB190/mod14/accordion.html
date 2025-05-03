@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Milena L C Merida
+        WEB190 Mod 14
+        5/3/2025-->
+<title>WEB190 - Mod14</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
+<body>
+    <div class="w3-container">
+        <div class="w3-container w3-indigo">
+            <h1>Header</h1>
+        </div>
+        <div class="w3-bar w3-blue">
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="form.html" class="w3-bar-item w3-button w3-hide-small">Form</a>
+            <a href="accordion.html" class="w3-bar-item w3-button w3-hide-small">Accordion</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+        </div>
+          
+        <div id="demo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium">
+            <a href="form.html" class="w3-bar-item w3-button">Form</a>
+            <a href="accordion.html" class="w3-bar-item w3-button">Accordion</a>
+        </div>
+        
+        <h2>Active Accordions</h2>
+        <p>In this example we add the w3-red class to an active accordion (when the button is clicked on and the content is opened).</p>
+
+        <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-light-blue w3-left-align">Open Section 1</button>
+        <div id="Demo1" class="w3-hide w3-container">
+            <p>Some text..</p>
+        </div>
+
+        <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-light-blue w3-left-align">Open Section 2</button>
+        <div id="Demo2" class="w3-hide w3-container">
+            <p>Some other text..</p>
+        </div>          
+    
+        <div class="w3-container w3-indigo w3-center">
+            <h5>Footer</h5>
+            <p>Footer information goes here</p>
+        </div>
+    </div><!--End of the page container-->
+    <script>
+        function myFunction() {
+          var x = document.getElementById("demo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.previousElementSibling.className = 
+            x.previousElementSibling.className.replace("w3-indigo", "w3-blue");
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+            x.previousElementSibling.className = 
+            x.previousElementSibling.className.replace("w3-indigo", "w3-blue");
+        }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
