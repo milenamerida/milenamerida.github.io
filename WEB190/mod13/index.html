@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Milena L C Merida
+        WEB190 Mod 13
+        5/3/2025-->
+<title>W3.CSS Grid</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
+<body>
+<div class="w3-container">
+    <div class="w3-container w3-orange">
+        <h1>Header</h1>
+    </div>
+    <div class="w3-bar w3-deep-orange">
+        <a href="#" class="w3-bar-item w3-button">Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small">Link 3</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+    </div>
+      
+    <div id="demo" class="w3-bar-block w3-deep-orange w3-hide w3-hide-large w3-hide-medium">
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+
+    <div class="w3-row"><!--Start of row 1-->
+        <div class="w3-col l2 m3 s12 w3-center w3-border">
+            <h2>Left Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur nisi eu placerat porta. In imperdiet massa finibus, euismod dui nec, dictum sem. Aenean eget dapibus tellus, nec dignissim magna. Integer posuere vestibulum elit non congue. Aenean eget finibus ipsum. Maecenas accumsan facilisis velit, sed ullamcorper augue mattis ut. Cras interdum mi vel mattis consequat. Mauris aliquam rutrum quam, at sagittis arcu accumsan sed. Donec interdum arcu metus, at consequat est tincidunt vel. In bibendum ac lorem eget tempus.</p>
+        </div>
+        <div class="w3-col l8 m6 s12 w3-center w3-border">
+            <h2>Left Column</h2>
+            <img src="IMG_0493.jpg" alt="" class="w3-image w3-right w3-margin">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur nisi eu placerat porta. In imperdiet massa finibus, euismod dui nec, dictum sem. Aenean eget dapibus tellus, nec dignissim magna. Integer posuere vestibulum elit non congue. Aenean eget finibus ipsum. Maecenas accumsan facilisis velit, sed ullamcorper augue mattis ut. Cras interdum mi vel mattis consequat. Mauris aliquam rutrum quam, at sagittis arcu accumsan sed. Donec interdum arcu metus, at consequat est tincidunt vel. In bibendum ac lorem eget tempus.</p>
+        </div>
+        <div class="w3-col l2 m3 s12 w3-center w3-border">
+            <h2>Left Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur nisi eu placerat porta. In imperdiet massa finibus, euismod dui nec, dictum sem. Aenean eget dapibus tellus, nec dignissim magna. Integer posuere vestibulum elit non congue. Aenean eget finibus ipsum. Maecenas accumsan facilisis velit, sed ullamcorper augue mattis ut. Cras interdum mi vel mattis consequat. Mauris aliquam rutrum quam, at sagittis arcu accumsan sed. Donec interdum arcu metus, at consequat est tincidunt vel. In bibendum ac lorem eget tempus.</p>
+        </div>
+    </div><!--Start of row 1-->
+
+    <div class="w3-row"><!--Start of row 2-->
+        <div class="w3-col l6 m4 s12 w3-center w3-border">
+            <h2>Left Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur nisi eu placerat porta. In imperdiet massa finibus, euismod dui nec, dictum sem. Aenean eget dapibus tellus, nec dignissim magna. Integer posuere vestibulum elit non congue. Aenean eget finibus ipsum. Maecenas accumsan facilisis velit, sed ullamcorper augue mattis ut. Cras interdum mi vel mattis consequat. Mauris aliquam rutrum quam, at sagittis arcu accumsan sed. Donec interdum arcu metus, at consequat est tincidunt vel. In bibendum ac lorem eget tempus.</p>
+        </div>
+        <div class="w3-col l6 m8 s12 w3-center w3-border">
+            <h2>Winter Items</h2>
+            <table class="w3-table w3-striped">
+                <tr><!--Row1-->
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+                <tr><!--Row2-->
+                    <td>Gloves</td>
+                    <td>$28</td>
+                </tr>
+                <tr><!--Row3-->
+                    <td>Jacket</td>
+                    <td>$54</td>
+                </tr>
+                <tr><!--Row4-->
+                    <td>Scarf</td>
+                    <td>$23</td>
+                </tr>
+                <tr><!--Row5-->
+                    <td>Cap</td>
+                    <td>$32</td>
+                </tr>
+            </table>
+        </div>
+    </div><!--Start of row 2-->
+
+    <div class="w3-container w3-orange w3-center">
+        <h5>Footer</h5>
+        <p>Footer information goes here</p>
+    </div>
+</div><!--End of the page container-->
+<script>
+    function myFunction() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
