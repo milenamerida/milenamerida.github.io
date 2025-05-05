@@ -1,0 +1,78 @@
+body{
+    font-family: "Mulish", sans-serif;
+    background-color: #fefae0;
+}
+
+#header{
+    padding: 15px;
+    height: 100%;
+    text-align: center;
+    /* border: thin solid black; */
+}
+
+#header > a{
+    text-decoration: none;
+}
+
+h1{
+    margin-bottom: -10px;
+    font-family: "Bona Nova SC", serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: #283618;
+}
+
+.w3-bar{
+    background-color: #283618;
+    color: #fefae0;
+    font-size: medium;
+}
+
+.w3-bar-block{
+    background-color: #283618;
+    color: #fefae0;
+    font-size: medium;
+}
+
+/* .w3-bar > a:hover{
+    color: #dda15e;
+} */
+
+#frame{
+    border: 4px solid #dda15e;
+}
+
+p{
+    font-size: medium;
+}
+
+h5{
+    font-family: "Mulish", sans-serif;
+    color: #283618;
+    font-weight: bold;
+}
+
+h2, h3{
+    font-family: "Bona Nova SC", serif;
+    color: #dda15e;
+    font-weight: bold;
+}
+
+.w3-btn{
+    background-color: #283618;
+    color: #fefae0;
+    font-weight: bold;
+}
+
+#subject{
+    height: 100px;
+}
+
+#googleMap{
+    width: 100%;
+    height: 400px;
+}
+
+
+
+

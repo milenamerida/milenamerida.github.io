@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Villa Toscana Restaurant</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="w3-container"><!-- Header-->
+        <div id="header" class="w3-container w3-center">
+            <a href="index.html"><h1>Villa Toscana</h1></a>
+            <p>An Italian Escape in Every Bite</p>
+        </div>
+        <div class="w3-bar">
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="menu.html" class="w3-bar-item w3-button w3-hide-small">Menu</a>
+            <a href="reservation.html" class="w3-bar-item w3-button w3-hide-small">Reservation</a>
+            <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+        </div>
+          
+        <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+            <a href="menu.html" class="w3-bar-item w3-button">Menu</a>
+            <a href="reservation.html" class="w3-bar-item w3-button">Reservation</a>
+            <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+        </div><!-- End of Header-->
+          
+        <form class="w3-container w3-col l6 m12 s12">
+            <h2 class="w3-center">Contact Form</h2>
+            <p>
+            <input class="w3-input" type="text">
+            <label>Full Name*</label></p>
+          
+            <p>
+            <input class="w3-input" type="text">
+            <label>Email*</label></p>
+          
+            <p>
+            <input class="w3-input" type="text">
+            <label>Phone Number*</label></p>
+            
+            <p>
+            <input id="subject" class="w3-input" type="text">
+            <label>Message</label></p>
+            
+            <button class="w3-btn">Submit</button>
+        </form>
+
+        <div class="w3-container w3-col l6 m12 s12">
+            <h2 class="w3-center">Come Visit Us!</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7876.748976550371!2d-88.07701542024897!3d42.0790973020699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fa5ea9833a843%3A0xeb56837f813674f!2sHarper%20College!5e0!3m2!1sen!2sus!4v1746476724257!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe>
+
+            <h5 class="w3-center">
+                1200 W Algonquin Rd<br>
+                Palatine, IL 60067<br>
+                847-925-5555
+            </h5>
+            <br>
+            <h3 class="w3-center">Hours of Operation</h3>
+            <p class="w3-center">
+                Monday through Friday: 05:00PM to 10:00PM<br>
+                Saturday and Sunday: 12:00PM to 10:00PM
+            </p>
+        </div>
+    
+        <div class="w3-container w3-center">
+            <p>Copyright&copy;2025</p>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("demo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
