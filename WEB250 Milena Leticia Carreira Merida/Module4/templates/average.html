@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Average Calculator</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+    <h1>Average Calculator</h1>
+
+    <form method="POST">
+        <label>Enter a value:</label>
+        <input type="number" name="value" step="any" aria-label="Enter a value">
+        <br><br>
+
+        <input type="hidden" name="total" value="{{ total }}">
+        <input type="hidden" name="count" value="{{ count }}">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if average is not none %}
+
+    <p>Total: {{ total }}</p>
+    <p>Count: {{ count }}</p>
+    <p>Average: {{ average }}</p>
+
+    {% endif %}
+    <br>
+
+    <a href="/">Back to Home</a>
+</body>
+
+</html>
