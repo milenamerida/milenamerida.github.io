@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Area Calculator</title>
+    <link rel="stylesheet" href="../static/styles.css">
+
+    <script>
+        function showForm() {
+            let shape = document.getElementById("shape").value;
+
+            document.getElementById("rectangle").style.display = "none";
+            document.getElementById("circle").style.display = "none";
+            document.getElementById("triangle").style.display = "none";
+
+            if(shape === "rectangle") {
+                document.getElementById("rectangle").style.display = "block";
+            }
+
+            if(shape === "circle") {
+                document.getElementById("circle").style.display = "block";
+            }
+
+            if(shape === "triangle") {
+                document.getElementById("triangle").style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Area Calculator</h1>
+
+    <label>Select Shape:</label>
+    <select id="shape" onchange="showForm()">
+        <option value="">Choose a Shape</option>
+        <option value="rectangle">Rectangle</option>
+        <option value="circle">Circle</option>
+        <option value="triangle">Triangle</option>
+    </select>
+    <br><br>
+
+    <div id="rectangle" style="display:none">
+        <form method="POST">
+            <input type="hidden" name="shape" value="rectangle">
+
+            <label>Length:</label>
+            <input type="number" name="length" aria-label="Length" required>
+
+            <label>Width:</label>
+            <input type="number" name="width" aria-label="Width" required>
+            
+            <button type="submit">Calculate Area</button>
+        </form>
+    </div>
+    <br><br>
+
+    <div id="circle" style="display:none">
+        <form method="POST">
+            <input type="hidden" name="shape" value="circle">
+
+            <label>Radius:</label>
+            <input type="number" name="radius" aria-label="Radius" required>
+            
+            <button type="submit">Calculate Area</button>
+        </form>
+    </div>
+    <br><br>
+
+    <div id="triangle" style="display:none">
+        <form method="POST">
+            <input type="hidden" name="shape" value="triangle">
+
+            <label>Base:</label>
+            <input type="number" name="base" aria-label="Base" required>
+
+            <label>Height:</label>
+            <input type="number" name="height" aria-label="Height" required>
+            
+            <button type="submit">Calculate Area</button>
+        </form>
+    </div>
+    <br><br>
+
+    {% if result is not none %}
+    <h2>Area: {{ result }}</h2>
+    {% endif %}
+    <br>
+
+    <a href="/">Back to Home</a>
+</body>
+
+</html>
