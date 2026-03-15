@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Earthquake List</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+    <h1>Earthquake List</h1>
+    <p>Upload a CSV document containing earthquake data.</p>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" aria-label="input file">
+        <button type="submit">Upload</button>
+    </form>
+    
+    {% if results %}
+    <h2>Results</h2>
+    <table>
+        <th>Date</th>
+        <th>Earthquake</th>
+        <th>Magnitude</th>
+        <th>Description</th>
+
+        {% for item in results %}
+
+        <tr class="{{ item.description }}">
+            <td>{{ item.date }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.magnitude }}</td>
+            <td>{{ item.description }}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+    {% endif %}
+    <br>
+
+    <a href="/">Back to Home</a>
+</body>
+
+</html>
