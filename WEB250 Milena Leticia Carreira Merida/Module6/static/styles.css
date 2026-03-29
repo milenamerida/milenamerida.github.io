@@ -1,0 +1,65 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color:#f4f4f4;
+    margin:40px;
+}
+
+h1{
+    color:#333;
+}
+
+a{
+    color:#0000ff;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 75%;
+}
+
+button {
+    padding: 8px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 600px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #333;
+    color: #fff;
+}
+
+.Tropical_Storm {
+    background: #d9edf7;
+}
+
+.Category_1 {
+    background: #c8e6c9;
+}
+
+.Category_2 {
+    background: #fff9c4;
+}
+
+.Category_3 {
+    background: #ffe0b2;
+}
+
+.Category_4 {
+    background: #ffccbc;
+}
+
+.Category_5 {
+    background: #ff8a80;
+    color: #fff;
+}

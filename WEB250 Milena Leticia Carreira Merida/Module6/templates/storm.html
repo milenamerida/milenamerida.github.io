@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Storm Analyzer</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+    <h1>Storm Analyzer</h1>
+    <p>Upload a CSV document containing storm data.</p>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" aria-label="input file">
+        <button type="submit">Upload</button>
+    </form>
+    
+    {% if table %}
+    <h2>Results</h2>
+    <table>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Km/h</th>
+        <th>Mph</th>
+        <th>Category</th>
+
+        {% for row in table %}
+
+        <tr class="{{ row[4] }}">
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ "%.1f"|format(row[3]) }}</td>
+            <td>{{ row[4] }}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+    {% endif %}
+    <br>
+
+    <a href="/">Back to Home</a>
+</body>
+
+</html>
