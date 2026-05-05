@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB250 Assignment 12</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+    <h1>WEB250 Assignment 12 - REST API</h1>
+
+    <div class="form">
+        <h2>Add Records</h2>
+        <input id="text" placeholder="Text" aria-label="text input">
+        <input id="number" type="number" placeholder="Number" aria-label="number input">
+        <input id="date" type="date" aria-label="date input">
+        <button onclick="createRecord()">Add</button>
+    </div>
+
+    <div class="form">
+        <h2>Update Records</h2>
+        <input id="updateId" placeholder="ID" aria-label="id update">
+        <input id="updateText" placeholder="Text" aria-label="text update">
+        <input id="updateNumber" type="number" placeholder="Number" aria-label="number update">
+        <input id="updateDate" type="date" aria-label="date update">
+        <button onclick="updateRecord()">Update</button>
+    </div>
+
+    <div class="form">
+        <h2>Delete Records</h2>
+        <input id="deleteId" placeholder="ID" aria-label="delete id">
+        <button onclick="deleteRecord()">Delete</button>
+    </div>
+
+    <hr>
+
+    <h2>Records</h2>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Text</th>
+                <th>Number</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
