@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB250 Assignment 11</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+    <h1>WEB250 Assignment 11</h1>
+
+    <p>Welcome:
+        {% if username %}
+            {{username}}
+        {% else %}
+            Guest
+        {% endif %}
+    </p>
+
+    <ul>
+        <li><a href="/login">Login Page</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+    </ul>
+
+
+</body>
+
+</html>
