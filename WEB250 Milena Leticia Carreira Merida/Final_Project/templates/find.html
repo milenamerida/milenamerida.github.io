@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find Dog | Dog Rescue Application</title>
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+
+    <body>
+        <h1>Find a Dog</h1>
+
+        <form method="POST">
+            <label for="name">Enter dog's name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <button type="submit">Search</button>
+        </form>
+
+        {% if result %}
+            <h3>{{ result }}</h3>
+        {% endif %}
+        <br>
+
+        <a href="/">Back to Menu</a>
+    </body>
+</html>

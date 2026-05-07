@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef3f7;
+    margin: 0;
+    padding: 30px;
+    color: #333;
+}
+
+h1 {
+    color: #2f3e46;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+a {
+    color: #2a6f97;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #014f86;
+    text-decoration: underline;
+}
+
+form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #2a6f97;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #014f86;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #2f3e46;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+h3 {
+    text-align: center;
+    color: #2a6f97;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}

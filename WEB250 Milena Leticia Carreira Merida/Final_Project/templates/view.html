@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View Dogs | Dog Rescue Application</title>
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+
+    <body>
+        <h1>Dogs in Shelter</h1>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>Age</th>
+                <th>Weight (lbs)</th>
+            </tr>
+
+            {% for dog in dogs %}
+            <tr>
+                <td>{{ dog[0] }}</td>
+                <td>{{ dog[1] }}</td>
+                <td>{{ dog[2] }}</td>
+                <td>{{ dog[3] }}</td>
+                <td>{{ dog[4] }}</td>
+            </tr>
+            
+            {% endfor %}
+            <br>
+
+            <a href="/">Back to Menu</a>
+        </table>
+    </body>
+</html>
